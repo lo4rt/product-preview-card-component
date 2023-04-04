@@ -1,0 +1,147 @@
+/* Weights: 500, 700 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+/* Weights: 700 */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces");
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+html {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-grayish-blue);
+  height: 100%;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+/* STYLING */
+
+body {
+  background: var(--cream);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMG */
+
+.card-component {
+  max-width: 45.5rem;
+  background: var(--white);
+  display: flex;
+  overflow: hidden;
+  border-radius: .7rem;
+}
+
+.card-component > * {
+  flex-basis: 50%;
+}
+
+picture {
+  overflow: hidden;
+}
+
+picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* MAIN CONTNENT */
+
+.card-main-content {
+  padding: 2.5rem;
+}
+
+.card-category {
+  letter-spacing: .3rem;
+  font-weight: 500;
+}
+
+.card-heading {
+  color: var(--very-dark-blue);
+
+  margin-top: 1.4rem;
+
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 2.4rem;
+}
+
+.card-description {
+  margin-top: 2.1rem;
+
+  line-height: 1.7rem;
+  letter-spacing: 0.05rem;
+}
+
+.card-price {
+  margin-top: 2.1rem;
+
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.card-price > p {
+  color: var(--dark-cyan);
+
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+button {
+  margin-top: 2rem;
+
+  background: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  border-radius: .5rem;
+
+  width: 100%;
+  height: 3.6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+button:hover {
+  background: var(--very-dark-blue);
+  cursor: pointer;
+}
+
+@media (max-width: 616px) {
+  main {
+    flex-direction: column;
+    margin: 1.25rem;
+  }
+}
